@@ -91,7 +91,20 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher_round.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2"/>
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.0.0.482510</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XamarinEmbedding.Plugin.Droid\XamarinEmbedding.Plugin.Droid.csproj">
+      <Project>{0b63703e-5fbe-4c2d-8793-4d60ce323383}</Project>
+      <Name>XamarinEmbedding.Plugin.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XamarinEmbedding.Plugin.Shared\XamarinEmbedding.Plugin.Shared.csproj">
+      <Project>{ad77cff3-f211-4705-91ab-2b1af311589d}</Project>
+      <Name>XamarinEmbedding.Plugin.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
