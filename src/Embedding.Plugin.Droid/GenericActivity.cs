@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Android.Runtime;
 
@@ -25,6 +26,12 @@ namespace Embedding.Plugin.Droid
             }
 
             Draw((Type: page, Assembly: assembly));
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            PluginHelper.CurrentActivity = this;
         }
 
         public void Draw((string Type, string Assembly) classname)

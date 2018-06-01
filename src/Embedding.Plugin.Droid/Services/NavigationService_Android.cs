@@ -15,5 +15,10 @@ namespace Embedding.Plugin.Droid.Services
             intent.PutExtra("assembly", type.Assembly.GetName().Name);
             PluginHelper.CurrentActivity.StartActivity(intent);
         }
+
+        public void NavigateBackAsync()
+        {
+            PluginHelper.CurrentActivity.Finish();
+        }
     }
 }
