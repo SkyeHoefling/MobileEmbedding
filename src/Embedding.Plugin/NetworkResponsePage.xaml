@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Embedding.Plugin.CommandBindingPage">
+             x:Class="Embedding.Plugin.NetworkResponsePage">
     <ContentPage.Resources>
         <ResourceDictionary>
             <x:Double x:Key="Margin">20</x:Double>
@@ -12,25 +12,24 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout VerticalOptions="CenterAndExpand"
+        <ScrollView>
+            <StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand"
                          HorizontalOptions="CenterAndExpand">
-                <Label Text="{Binding Title}"
+                    <Label Text="{Binding Title}"
                        FontSize="Large"/>
-                <Label Text="{Binding SubHeader}"
+                    <Label Text="{Binding SubHeader}"
                        Margin="{StaticResource Margin}"/>
-            </StackLayout>
-            <Label Margin="{StaticResource Margin}" 
-                   Text="{Binding Description}" />
-            <StackLayout Orientation="Horizontal"
+                </StackLayout>
+                <Label Margin="{StaticResource Margin}" 
+                   Text="{Binding Response}" />
+                <StackLayout Orientation="Horizontal"
                          VerticalOptions="EndAndExpand"
                          Margin="{StaticResource Margin}">
-                <Button Text="Back"
+                    <Button Text="Back"
                         Command="{Binding Back}" />
-                <Button Text="Next Page"
-                        Command="{Binding NextPage}"
-                        HorizontalOptions="EndAndExpand"/>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
