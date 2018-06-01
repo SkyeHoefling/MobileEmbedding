@@ -1,0 +1,4 @@
+com/xamarin/forms/platform/android/Native_FormsViewGroup.class
+com/xamarin/forms/platform/android/FormsViewGroup.class
+md5b60ffeb829f638581ab2bb9b1a7f4f3f/VisualElementRenderer_1.class
+md5b60ffeb829f638581ab2bb9b1a7f4f3f/PageRenderer.class
