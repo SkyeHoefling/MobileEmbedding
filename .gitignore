@@ -23,7 +23,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-.DS_Store/
+.DS_Store
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
