@@ -102,13 +102,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Embedding.Plugin.Droid\Embedding.Plugin.Droid.csproj">
-      <Project>{5a78b968-12dc-4df4-baf0-d537d18429e9}</Project>
-      <Name>Embedding.Plugin.Droid</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Embedding.Plugin\Embedding.Plugin.csproj">
-      <Project>{a2f238ef-c03b-4163-b051-ac1fbf75f0c9}</Project>
+      <Project>{C41C9B6B-CEB0-4AED-B973-AD24CCD8107A}</Project>
       <Name>Embedding.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Embedding.Plugin.Droid\Embedding.Plugin.Droid.csproj">
+      <Project>{A8047A20-F310-498D-A404-0205DCBC25E2}</Project>
+      <Name>Embedding.Plugin.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
