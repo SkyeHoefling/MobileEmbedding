@@ -2,11 +2,31 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Embedding.Plugin.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="Margin">20</x:Double>
+            <Style TargetType="Label">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+                <Setter Property="Margin" Value="{StaticResource Margin}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <StackLayout VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="CenterAndExpand">
+                <Label Text="Welcome to Xamarin.Forms!"
+                       FontSize="Large"/>
+                <Label Text="An Embedding proof of concept!" />                
+            </StackLayout>
+            <Label Margin="{StaticResource Margin}" 
+                   Text="This pae was written in XAML and C# but is being used in you native project utilizin a technique called NET Embedding. As you navigate through the demo you will see different techniques such as: Navigation, Network Connection, Actions and maybe even an alert! We are going to try and get the most out of this demo and utilize some of the nice UI tools availalbe in Xamarin.Forms such as styles and markup extensions, it should all be usable for this to be a solid proof of concept" />
+            <Button Text="Next Page"
+                    Clicked="Button_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

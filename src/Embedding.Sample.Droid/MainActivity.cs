@@ -48,6 +48,9 @@ namespace Embedding.Sample.Droid
         {
             var intent = new Intent(this, typeof(PluginActivity));
             StartActivity(intent);
+            //View view = (View) sender;
+            //Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+            //    .SetAction("Action", (Android.Views.View.IOnClickListener)null).Show();
         }
 	}
 }

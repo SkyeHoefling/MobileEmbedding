@@ -12,6 +12,7 @@ namespace Embedding.Plugin.Droid
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.plugin_layout);
 
+            PluginHelper.CurrentActivity = this;
             var helper = new PluginHelper();
             var frag = helper.Create(this);
 
