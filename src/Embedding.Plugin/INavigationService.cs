@@ -4,7 +4,7 @@ namespace Embedding.Plugin
 {
     public interface INavigationService
     {
-        void NavigateAsync(ContentPage page);
+        void NavigateAsync<TPage>() where TPage : ContentPage;
         void NavigateBackAsync();
     }
 }

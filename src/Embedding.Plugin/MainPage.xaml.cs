@@ -16,7 +16,7 @@ namespace Embedding.Plugin
         private void Button_Clicked(object sender, EventArgs e)
         {
             var naviationService = DependencyService.Get<INavigationService>();
-            naviationService.NavigateAsync(new CodePage());
+            naviationService.NavigateAsync<CodePage>();
         }
     }
 }

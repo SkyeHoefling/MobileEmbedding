@@ -22,7 +22,7 @@ namespace Embedding.Plugin
             nextButton.Clicked += (s, e) =>
             {
                 var navigationService = DependencyService.Get<INavigationService>();
-                navigationService.NavigateAsync(new CommandBindingPage());
+                navigationService.NavigateAsync<CommandBindingPage>();
             };
 
 			Content = new StackLayout {
