@@ -1,0 +1,1 @@
+include ':app', ':formsviewgroup', ':Embedding.Plugin.Droid'
