@@ -1,11 +1,15 @@
 ﻿
+using System;
 using Android.App;
 using Android.OS;
-using System;
+using Android.Runtime;
 
 namespace Embedding.Plugin.Droid
 {
     [Activity(Label = "GenericActivity")]
+#if NATIVE
+    [Register("embedding.plugin.droid.GenericActivity")]
+#endif
     class GenericActivity : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)

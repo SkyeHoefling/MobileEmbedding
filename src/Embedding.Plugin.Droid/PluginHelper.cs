@@ -1,16 +1,24 @@
 ﻿
 using Android.App;
 using Android.Content;
+using Android.Runtime;
+using Java.Interop;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 namespace Embedding.Plugin.Droid
 {
+#if NATIVE
+    [Register("embedding.plugin.droid.PluginHelper")]
+#endif
     public class PluginHelper
     {
         public static Activity CurrentActivity = null;
 
+#if NATIVE
+        [Export("create")]
+#endif
         public Fragment Create(Context context)
         {
             if (!Forms.IsInitialized)
@@ -21,12 +29,18 @@ namespace Embedding.Plugin.Droid
             return new MainPage().CreateFragment(context);
         }
 
+#if NATIVE
+        [Export("create")]
+#endif
         public Fragment Create<TPage>(Context context)
             where TPage : ContentPage
         {
             return Create(context, typeof(TPage));
         }
 
+#if NATIVE
+        [Export("create")]
+#endif
         public Fragment Create(Context context, (string Type, string Assembly) classname)
         {
             Console.WriteLine(classname);
@@ -46,6 +60,9 @@ namespace Embedding.Plugin.Droid
             return null;
         }
 
+#if NATIVE
+        [Export("create")]
+#endif
         public Fragment Create(Context context, Type page)
         {
             if (!Forms.IsInitialized)
